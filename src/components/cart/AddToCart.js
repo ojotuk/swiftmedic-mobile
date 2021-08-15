@@ -9,9 +9,9 @@ import {
 } from 'react-native'
 import { Modal, Portal, Text, Button, Provider } from 'react-native-paper'
 import { connect, useDispatch } from 'react-redux'
-import { COLORS } from '../../theme/theme'
-import { closeCartDialog, addToCart } from './../../slices/app.slice'
 import { AntDesign } from 'react-native-vector-icons'
+import { COLORS } from '../../theme/theme'
+import { closeCartDialog, addToCart } from '../../slices/app.slice'
 import { images } from '../../theme/images'
 
 const AddToCart = ({ openCartDialogue, preCart }) => {
@@ -138,10 +138,8 @@ const AddToCart = ({ openCartDialogue, preCart }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    openCartDialogue: state?.app?.openCartDialog,
-    preCart: state?.app?.preCart,
-  }
-}
+const mapStateToProps = (state) => ({
+  openCartDialogue: state?.app?.openCartDialog,
+  preCart: state?.app?.preCart,
+})
 export default connect(mapStateToProps)(AddToCart)

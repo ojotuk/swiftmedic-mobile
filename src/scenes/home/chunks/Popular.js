@@ -8,13 +8,13 @@ import {
   Image,
   ImageBackground,
 } from 'react-native'
-import { COLORS, FONTS } from '../../../theme/theme'
-import { setTitle, addToCart, addToPreCart } from '../../../slices/app.slice'
 import { useDispatch } from 'react-redux'
 import {
   MaterialIcons,
   MaterialCommunityIcons,
 } from 'react-native-vector-icons'
+import { COLORS, FONTS } from '../../../theme/theme'
+import { setTitle, addToCart, addToPreCart } from '../../../slices/app.slice'
 import { images } from '../../../theme/images'
 
 //
@@ -56,7 +56,7 @@ const Popular = ({ navigation }) => {
   ]
 
   const handleAddToCart = (item) => {
-    dispatch(addToPreCart({ item: item }))
+    dispatch(addToPreCart({ item }))
   }
   return (
     <View style={styles.root}>
@@ -64,7 +64,7 @@ const Popular = ({ navigation }) => {
         Popular Product
       </Text>
       <ScrollView
-        horizontal={true}
+        horizontal
         fadingEdgeLength={2}
         showsHorizontalScrollIndicator={false}
       >

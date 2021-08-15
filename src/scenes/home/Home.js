@@ -11,14 +11,14 @@ import {
 } from 'react-native'
 import Button from 'components/Button'
 import { colors } from 'theme'
+import { useDispatch } from 'react-redux'
 import PaperIntro from './chunks/PaperIntro'
 import { COLORS } from '../../theme/theme'
 import Category from './chunks/Category'
 import { images } from '../../theme/images'
 import { setTitle } from '../../slices/app.slice'
-import { useDispatch } from 'react-redux'
 import Popular from './chunks/Popular'
-import AddToCart from './../../components/cart/AddToCart'
+import AddToCart from '../../components/cart/AddToCart'
 
 //
 const styles = StyleSheet.create({

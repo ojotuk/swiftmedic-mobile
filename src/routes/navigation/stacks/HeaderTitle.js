@@ -2,7 +2,8 @@ import { FontDisplay } from 'expo-font'
 import React from 'react'
 import { StyleSheet, Image, Text } from 'react-native'
 import { connect } from 'react-redux'
-import { COLORS, FONTS } from './../../../theme/theme'
+import { COLORS, FONTS } from '../../../theme/theme'
+
 const styles = StyleSheet.create({
   title: {
     ...FONTS.h3,
@@ -11,15 +12,13 @@ const styles = StyleSheet.create({
 })
 
 const HeaderTitle = ({ title }) => (
-  <Text style={styles.title}>{title ? title : ''}</Text>
+  <Text style={styles.title}>{title || ''}</Text>
 )
 
 HeaderTitle.propTypes = {}
 HeaderTitle.defaultProps = {}
 
-const mapStateToProps = (state) => {
-  return {
-    title: state.app?.title,
-  }
-}
+const mapStateToProps = (state) => ({
+  title: state.app?.title,
+})
 export default connect(mapStateToProps)(HeaderTitle)

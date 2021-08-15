@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native'
-import { COLORS, FONTS } from '../../../theme/theme'
-import { setTitle } from '../../../slices/app.slice'
 import { useDispatch } from 'react-redux'
 import { MaterialIcons } from 'react-native-vector-icons'
+import { COLORS, FONTS } from '../../../theme/theme'
+import { setTitle } from '../../../slices/app.slice'
 import { images } from '../../../theme/images'
 
 //
@@ -58,7 +58,7 @@ const Category = ({ navigation }) => {
         Shop by Category
       </Text>
       <ScrollView
-        horizontal={true}
+        horizontal
         fadingEdgeLength={2}
         showsHorizontalScrollIndicator={false}
       >

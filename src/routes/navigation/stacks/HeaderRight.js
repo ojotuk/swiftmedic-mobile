@@ -2,11 +2,11 @@ import { FontDisplay } from 'expo-font'
 import React from 'react'
 import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
-import { COLORS, FONTS } from '../../../theme/theme'
 import {
   MaterialIcons,
   MaterialCommunityIcons,
 } from 'react-native-vector-icons'
+import { COLORS, FONTS } from '../../../theme/theme'
 
 const styles = StyleSheet.create({
   cart: {
@@ -32,9 +32,7 @@ const HeaderTitle = ({ cart }) => (
 HeaderTitle.propTypes = {}
 HeaderTitle.defaultProps = {}
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.app?.cart,
-  }
-}
+const mapStateToProps = (state) => ({
+  cart: state.app?.cart,
+})
 export default connect(mapStateToProps)(HeaderTitle)
