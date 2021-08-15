@@ -11,7 +11,12 @@ export const svgs = {
 export const images = {
   logo_sm: require('../../assets/images/logo-sm.png'),
   logo_lg: require('../../assets/images/logo-lg.png'),
+  disposable: require('../../assets/images/disposal.png'),
+  doctor: require('../../assets/images/doctor.png'),
+  product: require('../../assets/images/product.png'),
 }
 
 // image preloading
-export const imageAssets = Object.keys(images).map((key) => Asset.fromModule(images[key]).downloadAsync())
+export const imageAssets = Object.keys(images).map((key) =>
+  Asset.fromModule(images[key]).downloadAsync(),
+)

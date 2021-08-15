@@ -6,6 +6,10 @@ import Profile from 'scenes/profile'
 import Details from 'scenes/details'
 import HeaderLeft from './HeaderLeft'
 import HeaderTitle from './HeaderTitle'
+import { COLORS } from '../../../theme/theme'
+import Category from '../../../scenes/categoy/Category'
+import HeaderRight from './HeaderRight'
+import Description from '../../../scenes/description'
 
 // ------------------------------------
 // Constants
@@ -15,7 +19,7 @@ const Stack = createStackNavigator()
 
 const navigationProps = {
   headerTintColor: 'white',
-  headerStyle: { backgroundColor: colors.darkPurple },
+  headerStyle: { backgroundColor: COLORS.primary },
   headerTitleStyle: { fontSize: 18 },
 }
 
@@ -36,6 +40,27 @@ export const HomeNavigator = () => (
         title: 'Home',
         headerLeft: () => <HeaderLeft navigation={navigation} />,
         headerTitle: () => <HeaderTitle />,
+        headerRight: () => <HeaderRight />,
+      })}
+    />
+    <Stack.Screen
+      name="Category"
+      component={Category}
+      options={({ navigation }) => ({
+        title: 'Category',
+        headerLeft: () => <HeaderLeft navigation={navigation} />,
+        headerTitle: () => <HeaderTitle />,
+        headerRight: () => <HeaderRight />,
+      })}
+    />
+    <Stack.Screen
+      name="Description"
+      component={Description}
+      options={({ navigation }) => ({
+        title: 'Description',
+        headerLeft: () => <HeaderLeft navigation={navigation} />,
+        headerTitle: () => <HeaderTitle />,
+        headerRight: () => <HeaderRight />,
       })}
     />
     <Stack.Screen
@@ -45,6 +70,7 @@ export const HomeNavigator = () => (
         title: 'Home',
         headerLeft: () => <HeaderLeft navigation={navigation} />,
         headerTitle: () => <HeaderTitle />,
+        headerRight: () => <HeaderRight />,
       })}
     />
   </Stack.Navigator>

@@ -6,6 +6,7 @@ import { colors } from 'theme'
 
 // stack navigators
 import { HomeNavigator, ProfileNavigator } from '../stacks'
+import { COLORS } from '../../../theme/theme'
 
 const Tab = createBottomTabNavigator()
 
@@ -19,7 +20,7 @@ const TabNavigator = () => (
             return (
               <FontIcon
                 name="home"
-                color={focused ? colors.lightPurple : colors.gray}
+                color={focused ? COLORS.primary : colors.gray}
                 size={20}
                 solid
               />
@@ -28,7 +29,7 @@ const TabNavigator = () => (
             return (
               <FontIcon
                 name="user"
-                color={focused ? colors.lightPurple : colors.gray}
+                color={focused ? COLORS.primary : colors.gray}
                 size={20}
                 solid
               />
