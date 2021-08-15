@@ -7,7 +7,9 @@ import {
   View,
   ImageBackground,
 } from 'react-native'
-import { Modal, Portal, Text, Button, Provider } from 'react-native-paper'
+import {
+  Modal, Portal, Text, Button, Provider,
+} from 'react-native-paper'
 import { connect, useDispatch } from 'react-redux'
 import { AntDesign } from 'react-native-vector-icons'
 import { COLORS } from '../../theme/theme'

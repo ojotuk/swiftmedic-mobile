@@ -1,6 +1,8 @@
 import { FontDisplay } from 'expo-font'
 import React from 'react'
-import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native'
+import {
+  StyleSheet, Image, Text, View, TouchableOpacity,
+} from 'react-native'
 import { connect } from 'react-redux'
 import {
   MaterialIcons,

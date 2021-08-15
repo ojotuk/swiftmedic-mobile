@@ -70,9 +70,7 @@ const Popular = ({ navigation }) => {
       >
         {navItem.map((item, index) => (
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('Description', { product: item })
-            }
+            onPress={() => navigation.navigate('Description', { product: item })}
             key={index}
             style={styles.item}
           >

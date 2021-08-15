@@ -50,7 +50,7 @@ const Category = ({ navigation }) => {
   ]
 
   React.useEffect(() => {
-    ;() => dispatch(setTitle({ title: 'Swift Medic' }))
+    () => dispatch(setTitle({ title: 'Swift Medic' }))
   }, [])
   return (
     <View style={styles.root}>
@@ -64,9 +64,7 @@ const Category = ({ navigation }) => {
       >
         {navItem.map((item, index) => (
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('Category', { category: item.category })
-            }
+            onPress={() => navigation.navigate('Category', { category: item.category })}
             key={index}
             style={styles.item}
           >

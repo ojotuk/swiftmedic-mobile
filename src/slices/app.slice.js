@@ -34,14 +34,14 @@ const appSlice = createSlice({
       state.title = payload.title
     },
     addToPreCart: (state, { payload }) => {
-      ;(state.preCart = payload.item), (state.openCartDialog = true)
+      (state.preCart = payload.item), (state.openCartDialog = true)
     },
     addToCart: (state, { payload }) => {
-      ;(state.cart = [payload.item, ...state.cart]),
-        (state.openCartDialog = true)
+      (state.cart = [payload.item, ...state.cart]),
+      (state.openCartDialog = true)
     },
     closeCartDialog: (state, { payload }) => {
-      ;(state.openCartDialog = false), (state.preCart = {})
+      (state.openCartDialog = false), (state.preCart = {})
     },
   },
 })
